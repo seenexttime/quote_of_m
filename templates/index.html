@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Quote Generator</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="/static/sty.css">
+</head>
+<body>
+  <div class="wrapper">
+    <header>Quote of the day</header>
+    <div class="content">
+      <div class="quote-area">
+        <i class="fas fa-quote-left"></i>
+        <p class="quote">
+          {{quotes.body}}
+        </p>
+        <i class="fas fa-quote-right"></i>
+      </div>
+      <div class="author">
+        <span>-- {{quotes.author}}</span>
+      </div>
+    </div>
+    <div class="buttons">
+      <div class="features">
+        <ul>
+          <li class="sound"><i class="fas fa-volume-up"></i></li>
+          <li class="copy"><i class="fas fa-copy"></i></li>
+          <li class="twitter"><i class="fa fa-envelope"></i></li>
+        </ul>
+        <a href="{% url 'app:home' %}">New Quote</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
